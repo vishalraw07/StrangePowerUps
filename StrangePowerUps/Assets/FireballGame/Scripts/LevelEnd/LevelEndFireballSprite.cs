@@ -5,7 +5,8 @@ using UnityEngine.Events;
 
 //[ExecuteInEditMode]
 public class LevelEndFireballSprite : MonoBehaviour {
-
+    
+    [SerializeField] private Transform centreTransform;
     private Vector2 centre;
     private Vector2 p1;
     private Vector2 v1;
@@ -15,14 +16,13 @@ public class LevelEndFireballSprite : MonoBehaviour {
     [SerializeField] private float t = 0;
 
     private void Awake() {
-        centre = transform.parent.Find("Centre").transform.position;
+        centre = centreTransform.position;
     }
 
     public void Update() {
         Vector2 pPrev = transform.position;
 
         float r = 1 - ((t * 2 - 1) * (t * 2 - 1));
-
         //transform.position = p1 + t * (centre - p1)
         //transform.position = p1 + t * (centre - p1) + r * (p1 - centre);
         transform.position = p1 + t * (centre - p1) + r * (v1 + vTangent);

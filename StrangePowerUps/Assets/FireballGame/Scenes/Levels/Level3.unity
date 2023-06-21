@@ -270,8 +270,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelEnd
       objectReference: {fileID: 0}
+    - target: {fileID: 8934147266546943475, guid: c1ae8beb723ef9d4b8ddd220cd3b2c5e, type: 3}
+      propertyPath: spriteOn
+      value: 
+      objectReference: {fileID: 956546846}
+    - target: {fileID: 8934147266546943475, guid: c1ae8beb723ef9d4b8ddd220cd3b2c5e, type: 3}
+      propertyPath: spriteOff
+      value: 
+      objectReference: {fileID: 956546847}
+    - target: {fileID: 8934147266546943475, guid: c1ae8beb723ef9d4b8ddd220cd3b2c5e, type: 3}
+      propertyPath: duplicateFireball
+      value: 
+      objectReference: {fileID: 956546845}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1ae8beb723ef9d4b8ddd220cd3b2c5e, type: 3}
+--- !u!1 &956546845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4961114665558552457, guid: c1ae8beb723ef9d4b8ddd220cd3b2c5e, type: 3}
+  m_PrefabInstance: {fileID: 956546844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &956546846 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8934147267615301372, guid: c1ae8beb723ef9d4b8ddd220cd3b2c5e, type: 3}
+  m_PrefabInstance: {fileID: 956546844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &956546847 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8934147266878320988, guid: c1ae8beb723ef9d4b8ddd220cd3b2c5e, type: 3}
+  m_PrefabInstance: {fileID: 956546844}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &961537469
 PrefabInstance:
   m_ObjectHideFlags: 0
