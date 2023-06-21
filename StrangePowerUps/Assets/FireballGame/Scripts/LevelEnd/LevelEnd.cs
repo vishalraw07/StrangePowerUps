@@ -8,16 +8,17 @@ public class Vec2UnityEvent : UnityEvent<Vector2> { }
 
 public class LevelEnd : MonoBehaviour {
 
-    private SpriteRenderer spriteOff;
-    private SpriteRenderer spriteOn;
-    private GameObject duplicateFireball;
+    [SerializeField] private SpriteRenderer spriteOff;
+    [SerializeField] private SpriteRenderer spriteOn;
+    [SerializeField] private GameObject duplicateFireball;
 
     public Vec2UnityEvent OnLevelEnd;
 
     private void Awake() {
-        spriteOff = transform.Find("SpriteOff").GetComponent<SpriteRenderer>();
-        spriteOn = transform.Find("SpriteOn").GetComponent<SpriteRenderer>();
-        duplicateFireball = transform.Find("FireballSprite").gameObject;
+        //spriteOff = transform.Find("SpriteOff").GetComponent<SpriteRenderer>();
+        //spriteOn = transform.Find("SpriteOn").GetComponent<SpriteRenderer>();
+        //duplicateFireball = transform.Find("FireballSprite").gameObject;
+        // No need to find components since they are already referenced in the Inspector.
     }
 
     // initiate the level end animation
@@ -46,6 +47,6 @@ public class LevelEnd : MonoBehaviour {
     }
 
     public void OnFireballAnimComplete() {
-        OnLevelEnd.Invoke(transform.Find("Centre").transform.position);
+        OnLevelEnd.Invoke(transform.position);
     }
 }
